@@ -7,5 +7,6 @@ public class Main {
         FileOperation fileOperation = new FileOperation();
         fileOperation.printDirsInDirectory("C:\\AMD");
         fileOperation.printFilesInDirectory("C:\\AMD");
+        fileOperation.printAllInDirectory("C:\\AMD");
     }
 }
