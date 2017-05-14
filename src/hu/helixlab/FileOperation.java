@@ -75,4 +75,23 @@ public class FileOperation {
 
         return equal;
     }
+
+    public String searchFile(String file) {
+        String path = "";
+        String dirName = "C:\\";
+        File myFile = new File(dirName);
+        File[] listOfFiles = myFile.listFiles();
+        if (listOfFiles != null) {
+            for (File file1 : listOfFiles) {
+                if (file.equalsIgnoreCase(file1.getName())) {
+                    path = file1.getParentFile() + "\\" + file1.getName();
+                    break;
+                }else {
+                    path = "Nincs ilyen fájl!";
+                }
+            }
+        }
+        return path;
+
+    }
 }
